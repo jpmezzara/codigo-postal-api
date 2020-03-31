@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "codigo-postal-api-executor",
+    "name": "codigo-postal-api",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "8szvpjy6y6",
+    "module": "api"
+  }
+}
