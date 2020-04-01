@@ -1,6 +1,7 @@
 const Api = require('claudia-api-builder');
 const estados = require('./data/estados');
 const cps = require('./data/cps');
+const getMunicipios = require('./handlers/get-municipios');
 
 const api = new Api();
 
@@ -9,7 +10,7 @@ api.get('/estados', () => {
 });
 
 api.get('/estados/{id}/municipios', (request) => {
-    return cps.filter(codigo => codigo.idEstado === request.pathParams.id);
+    return getMunicipios(request.pathParams.id, cps);
 });
 
 api.get('/cp/{cp}', (request) => {
